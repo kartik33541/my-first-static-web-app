@@ -1,17 +1,80 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>Vanilla JavaScript App</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Margie's Travel Tour</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <main>
-    <h1>Vanilla JavaScript App</h1>
-  </main>
-</body>
+  <div class="layout">
 
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-top">
+        <div class="brand">
+          <div class="brand-avatar" aria-hidden="true">🌍</div>
+          <div class="brand-text">
+            <h2>Margie</h2>
+            <p class="muted">Travel assistant</p>
+          </div>
+        </div>
+
+        <button class="new-chat" type="button">+ New Chat</button>
+      </div>
+
+      <div class="history">
+        <p class="history-title">Recent</p>
+        <ul>
+          <li class="history-item" tabindex="0">Paris trip</li>
+          <li class="history-item" tabindex="0">India tourism</li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Main Chat -->
+    <main class="main">
+      <!-- Header -->
+      <header class="top">
+        <div class="top-inner">
+          <div class="title-block">
+            <h1>Margie's Travel Tour ✈️</h1>
+            <p>Your smart travel assistant</p>
+          </div>
+          <div class="status">
+            <span class="status-dot" aria-hidden="true"></span>
+            <span>Ready</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Chat Area -->
+      <section id="chat" class="chat" aria-live="polite"></section>
+
+      <!-- Input -->
+      <form class="input-area" id="chatForm">
+        <div class="input-wrap">
+          <textarea
+            id="message"
+            rows="1"
+            placeholder="Ask about destinations, food, travel tips..."
+            autocomplete="off"
+          ></textarea>
+
+          <button id="sendBtn" class="send-btn" type="submit" aria-label="Send message">
+            <span class="send-icon" aria-hidden="true">➤</span>
+            <span class="send-text">Send</span>
+          </button>
+        </div>
+
+        <div class="hint">
+          <span class="kbd">Enter</span> to send • <span class="kbd">Shift</span>+<span class="kbd">Enter</span> for new line
+        </div>
+      </form>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
 </html>
